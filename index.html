@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gateau au chocolat</title>
+</head>
+<body>
+<!--Remarque : lorsqu'on veut recentrer un element et qu'on ne sait pas comment faire, il suffira d'utiliser une div 
+    et appliquer à cette div la propriété        text-align: center-->
+
+        <div class="contenu">
+            <div class="centre pos">
+                <p class="recette">Recette</p>
+            </div>
+            <h1 class="centre titre"> Gateau au chocolat</h1>
+            <div class="separateur"></div>
+            <div class="centre">
+                <p class="description centre">"Cette recette facile du gateau au chocolat est un grand classique qui fera plaisir à vos enfants."</p>
+            </div>
+
+            <div class="table_dessous_image">
+                <img src="https://img-3.journaldesfemmes.fr/xNHzCsgpfQo_8J-OdpsaAkBGltA=/748x499/smart/3fab692feaaf4aeda820708bbb11ada6/recipe-jdf/10018954.jpg?id=1098" 
+                class="centre image_style"/>
+                <table class="tab">
+                    <tr class="bord_line_table">
+                        <th>Difficulté</th>
+                        <th>Préparation</th>
+                        <th>Cuisson</th>
+                        <th>Temps total</th>
+                    </tr>
+                    <tr>
+                        <td>facile</td>
+                        <td>10 min</td>
+                        <td>25 min</td>
+                        <td>35 min</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <div class="colonne1 colonne">
+                    <h2>Ingrédients</h2>
+                    <p>Chocolat noir: 200g</p>
+                    <p>Beurre: 200g</p>
+                    <p>Sucre: 150g</p>
+                    <p>Farine: 80g</p>
+                </div>
+                <div class="colonne2 colonne">
+                    <h2>Préparation</h2>
+                    <table class="preparation">
+                        <tr> <td> <p class="rond">1</p></td> <td class="preparation_etape">Faire fondre le chocolat avec le beurre</td> </tr> <!--Ici on utilse le entoure le numero de <p> pour s'assurer que tous les numeros aient la meme taille de contenant-->
+                        <tr> <td> <p class="rond">2</p></td> <td class="preparation_etape">Mélanger le sucre, les oeufs et la farine</td> </tr>
+                        <tr> <td> <p class="rond">3</p></td> <td class="preparation_etape">Mélanger le tout pour faire une pate</td> </tr>
+                        <tr> <td> <p class="rond">4</p></td> <td class="preparation_etape">Mettre au four.</td> </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
