@@ -1,0 +1,174 @@
+
+/*Ce style signifie qu'il est appliqué à tous les elements par defaut de la page.*/
+*{
+    overflow: auto; /*Cette propriété permet à ce que chaque contenant s'adapte et enveloppe son contenu*/
+}
+body{
+    background-color: #8ba1bb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.centre{
+    text-align: center;
+    width: 100%;    /*Cette propriété permet au contenu enfant d'occuper 100% de la largeur de son parent*/
+}
+.titre{
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.pos{
+    margin-top: -40px;
+}
+p.recette{
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding: 8px 18px;
+    font-weight: bold;
+    margin-top: 0;
+ /*   margin-left: 40px;*/
+}
+
+p.description{
+    display: inline-block;  
+    max-width: 400px;
+    font-size: 14px;
+}
+/*Rappel : La valeur inline-block de la propriété display permet d'associer la valeur inline qui permet d'occuper juste l'espace necessaire et la propriété bloc 
+qui elle permet de mieux controler les positions horizontales et verticales*/
+.contenu{
+    box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 25px;
+    margin: 40px 5px 60px 5px;
+
+    overflow: visible;   /*propriété permettant au parent de toujours envelopper tous ses enfants*/
+}
+.separateur{
+    height: 1px;
+    width: 100px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.table_dessous_image{
+    position: relative; /*Cette propriété permet à un element de le repositionner par rapport à sa position d'origine 
+                             et également permet aux elements enfant de pouvoir utiliser la valeur absolue de position.*/
+}
+.tab{
+    position: absolute; /*ici, on est enfant de table_dessous_image. Du coup, l'espace occupé par le tableau devient inexistant.
+                        l'espace occupé par le parent depend maintenant seulement des autres enfants et non de cet enfant.*/
+    bottom: 0;  /*Permet d'occuper le bas de l'élément parent.*/
+    height: 50px;
+    width: 100%;
+    color: white;
+    background-color: #6c829dc0; /*les 6 premiers chiffres Hex representent la couleur et les 2 derniers l'opacité de la couleur*/
+}
+td{
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 3px;
+    vertical-align: top;
+}
+th{
+    font-size: 14px;   
+    vertical-align: bottom;
+    padding-bottom: 10px;
+}
+.image_style{
+    display: block;
+    object-fit: cover;
+    background-color: gray;
+    min-height: 250px;
+    max-height: 500px;
+}
+.colonne{
+    font-weight: 400;
+    width: 100%;
+}
+.colonne2{
+    margin-top: 20px;
+}
+
+div > h2{   /*Pour dire tous les enfants direct de div qui sont des h2*/
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 8px solid #6c829d;
+    padding-bottom: 5px;
+}
+.colonne p{
+    border: 1px solid lightgray;
+    text-align: center;
+    padding: 7px 0;
+ /*   width: 90%;
+    margin-left: 5%;    */  
+    margin: 5px 0px;
+}
+table.preparation{
+    padding-left: 0px;
+}
+.rond{
+    box-sizing: border-box; /* pour l'ajout des padding ne change pas la taille de la taille de l'element.*/
+    background-color: #6c829d;
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+    border-radius: 50%;
+    vertical-align: top;
+    overflow: visible;
+    /*permet à ce que le calcul de la taille de l'élément ne dependent plus des padding*/
+}
+table.preparation > td{
+    border: 1px solid black;
+}
+
+table.preparation td.preparation_etape{
+    text-align: left;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+/*Pour Ordinateur*/
+
+@media only screen and (min-width: 768px) {
+    .contenu{
+        width: 70%;
+        min-width: 350px;
+        margin-left: auto;
+        margin-right: auto; 
+        max-width: 800px;
+    }
+    .tab{
+        position: absolute; /*ici, on est enfant de table_dessous_image. Du coup, l'espace occupé par le tableau devient inexistant.
+                            l'espace occupé par le parent depend maintenant seulement des autres enfants et non de cet enfant.*/
+        bottom: 0;  /*Permet d'occuper le bas de l'élément parent.*/
+        height: 80px;
+        width: 100%;
+        color: white;
+        background-color: #6c829dc0; /*les 6 premiers chiffres Hex representent la couleur et les 2 derniers l'opacité de la couleur*/
+    }
+    td{
+        font-size: 16px;
+    }
+    th{
+        font-size: 18px;   
+    }
+    .colonne{
+        width: 45%;
+    }
+    .colonne1{
+        display: inline-block;
+    } 
+    .colonne2{
+        margin-top: 0px;
+        float: right;
+    }
+
+}
